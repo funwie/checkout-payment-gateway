@@ -3,7 +3,7 @@
 ### Please see eamil attached documents for design and architectural decisions
 Or visit https://docs.google.com/document/d/1LpzoQqDU6NO5py2RCNgxDPK1Gt6GM3tjD9zQeNkkwaY/edit?usp=sharing
 
-### To switch to production Acquirer Service, We change appsettings configuration for to the External Acquire Service
+### To switch to production Acquirer Service, We change appsettings configuration to the External Acquirer Service
 
 ### Postman and Swagger Hub provide Mock Serveers. 
 By designing the API using OpenApi standard, we can use these tools for Mock servers
