@@ -1,6 +1,6 @@
 ## Payment Gateway 
 
-### Please see attached documents for design and architectural decisions
+### Please see eamil attached documents for design and architectural decisions
 
 ### To switch to production Acquirer Service, We change appsettings configuration for to the External Acquire Service
 
