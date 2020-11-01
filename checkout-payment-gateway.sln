@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CA816703-9471-4F3C-82B7-DAF4FD700583}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5D88B41C-00DD-4796-A45B-284F6E189748}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "merchant-client", "merchant-client", "{C88A2E51-057C-4F34-A5FF-F0105B3CF136}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{C6366E53-7F56-4897-BE26-62AE6C1A7706}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0B2A2710-0649-4867-9E61-88DBA58DA463}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckoutPaymentGateway", "src\CheckoutPaymentGateway\CheckoutPaymentGateway.csproj", "{5EAA8275-A610-4176-8986-1BFD4F7B9AF9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckoutPaymentGateway.MerchantClient", "merchant-client\CheckoutPaymentGateway.MerchantClient\CheckoutPaymentGateway.MerchantClient.csproj", "{28D1794B-D956-4C90-9A21-BA456ECF96EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckoutPaymentGateway.Tests", "tests\CheckoutPaymentGateway.Tests\CheckoutPaymentGateway.Tests.csproj", "{7E1D3B8D-8579-4FB7-8771-2CDACA3D8C2C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mock-services", "mock-services", "{FFF47F78-D47A-4519-8080-066F0EAF06CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data-access", "data-access", "{3FD5A2F0-E7BE-4874-8575-954B90AB8E61}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckoutPaymentGateway.DataAccess", "src\CheckoutPaymentGateway.DataAccess\CheckoutPaymentGateway.DataAccess.csproj", "{D76F817F-16AF-4B71-B4C9-C3A9B65E3E08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckoutPaymentGateway.MockAcquirer", "mock-services\CheckoutPaymentGateway.MockAcquirer\CheckoutPaymentGateway.MockAcquirer.csproj", "{C9E63ABE-99DE-4310-8831-CD83B51FBB38}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EAA8275-A610-4176-8986-1BFD4F7B9AF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EAA8275-A610-4176-8986-1BFD4F7B9AF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EAA8275-A610-4176-8986-1BFD4F7B9AF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EAA8275-A610-4176-8986-1BFD4F7B9AF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28D1794B-D956-4C90-9A21-BA456ECF96EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28D1794B-D956-4C90-9A21-BA456ECF96EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28D1794B-D956-4C90-9A21-BA456ECF96EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28D1794B-D956-4C90-9A21-BA456ECF96EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E1D3B8D-8579-4FB7-8771-2CDACA3D8C2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E1D3B8D-8579-4FB7-8771-2CDACA3D8C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E1D3B8D-8579-4FB7-8771-2CDACA3D8C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E1D3B8D-8579-4FB7-8771-2CDACA3D8C2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D76F817F-16AF-4B71-B4C9-C3A9B65E3E08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D76F817F-16AF-4B71-B4C9-C3A9B65E3E08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D76F817F-16AF-4B71-B4C9-C3A9B65E3E08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D76F817F-16AF-4B71-B4C9-C3A9B65E3E08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9E63ABE-99DE-4310-8831-CD83B51FBB38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9E63ABE-99DE-4310-8831-CD83B51FBB38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9E63ABE-99DE-4310-8831-CD83B51FBB38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9E63ABE-99DE-4310-8831-CD83B51FBB38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5EAA8275-A610-4176-8986-1BFD4F7B9AF9} = {CA816703-9471-4F3C-82B7-DAF4FD700583}
+		{28D1794B-D956-4C90-9A21-BA456ECF96EF} = {C88A2E51-057C-4F34-A5FF-F0105B3CF136}
+		{7E1D3B8D-8579-4FB7-8771-2CDACA3D8C2C} = {5D88B41C-00DD-4796-A45B-284F6E189748}
+		{D76F817F-16AF-4B71-B4C9-C3A9B65E3E08} = {CA816703-9471-4F3C-82B7-DAF4FD700583}
+		{C9E63ABE-99DE-4310-8831-CD83B51FBB38} = {FFF47F78-D47A-4519-8080-066F0EAF06CD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CAA2089D-18EB-44CA-A615-CEAD120E4B6E}
+	EndGlobalSection
+EndGlobal

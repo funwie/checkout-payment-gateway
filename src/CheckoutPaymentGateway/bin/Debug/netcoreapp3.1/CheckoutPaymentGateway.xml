@@ -1,0 +1,1534 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CheckoutPaymentGateway</name>
+    </assembly>
+    <members>
+        <member name="T:CheckoutPaymentGateway.Attributes.ValidateModelStateAttribute">
+            <summary>
+            Model state validation attribute
+            </summary>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Attributes.ValidateModelStateAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Called before the action method is invoked
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Common.Address">
+            <summary>
+            A postal address.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Common.Address.AddressLine1">
+            <summary>
+            The first line of the address
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Common.Address.AddressLine2">
+            <summary>
+            The second line of the address
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Common.Address.City">
+            <summary>
+            The address city
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Common.Address.State">
+            <summary>
+            The address state
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Common.Address.Zip">
+            <summary>
+            The address zip/postal code
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Common.Address.Country">
+            <summary>
+            The two-letter ISO country code of the address.
+            </summary>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Common.Address.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Common.Address.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Common.Address.Equals(CheckoutPaymentGateway.Common.Address)">
+            <summary>
+            Returns true if Address instances are equal
+            </summary>
+            <param name="other">Instance of Address to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Common.Address.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Common.BillingDescriptor">
+            <summary>
+            The billing description to be displayed on the account owner's statement.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Common.BillingDescriptor.Name">
+            <summary>
+            A dynamic description of the charge
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Common.BillingDescriptor.City">
+            <summary>
+            The city from which the charge originated
+            </summary>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Common.BillingDescriptor.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Common.BillingDescriptor.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Common.BillingDescriptor.Equals(CheckoutPaymentGateway.Common.BillingDescriptor)">
+            <summary>
+            Returns true if BillingDescriptor instances are equal
+            </summary>
+            <param name="other">Instance of BillingDescriptor to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Common.BillingDescriptor.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Common.Link">
+            <summary>
+            Hypermedia link as per the JSON HAL specification (http://stateless.co/hal_specification.html).
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Common.Link.Href">
+            <summary>
+            The link URL
+            </summary>
+            <value>The link URL</value>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Common.Link.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Common.Link.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Common.Link.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Common.Link.Equals(CheckoutPaymentGateway.Common.Link)">
+            <summary>
+            Returns true if Link instances are equal
+            </summary>
+            <param name="other">Instance of Link to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Common.Link.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Common.Phone">
+            <summary>
+            A phone number.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Common.Phone.CountryCode">
+            <summary>
+            The international country calling code.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Common.Phone.Number">
+            <summary>
+            The phone number
+            </summary>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Common.Phone.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Common.Phone.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Common.Phone.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Common.Phone.Equals(CheckoutPaymentGateway.Common.Phone)">
+            <summary>
+            Returns true if Phone instances are equal
+            </summary>
+            <param name="other">Instance of Phone to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Common.Phone.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Common.ShippingDetails">
+            <summary>
+            The shipping details for a payment request.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Common.ShippingDetails.Address">
+            <summary>
+            Gets or sets the shipping address.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Common.ShippingDetails.Phone">
+            <summary>
+            Gets or sets the phone number associated with the shipping address.
+            </summary>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Common.ThreeDSEnrollment">
+            <summary>
+            3D-Secure Enrollment Data.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Common.ThreeDSEnrollment.Downgraded">
+            <summary>
+            Inidicates whether this was a 3D Secure payment downgraded to non-3D Secure (when &#x60;attempt_n3d&#x60; is specified)
+            </summary>
+            <value>Inidicates whether this was a 3D Secure payment downgraded to non-3D Secure (when &#x60;attempt_n3d&#x60; is specified)</value>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Common.ThreeDSEnrollment.Enrolled">
+            <summary>
+            Indicates the 3D Secure enrollment status of the issuer   * &#x60;Y&#x60; - Issuer enrolled   * &#x60;N&#x60; - Customer not enrolled   * &#x60;U&#x60; - Unknown 
+            </summary>
+            <value>Indicates the 3D Secure enrollment status of the issuer   * &#x60;Y&#x60; - Issuer enrolled   * &#x60;N&#x60; - Customer not enrolled   * &#x60;U&#x60; - Unknown </value>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Common.ThreeDSEnrollment.SignatureValid">
+            <summary>
+            Verification to ensure the integrity of the response
+            </summary>
+            <value>Verification to ensure the integrity of the response</value>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Common.ThreeDSEnrollment.AuthenticationResponse">
+            <summary>
+            Indicates whether or not the cardholder was authenticated   * &#x60;Y&#x60; - Customer authenticated   * &#x60;N&#x60; - Customer not authenticated   * &#x60;A&#x60; - An authentication attempt occurred but could not be completed   * &#x60;U&#x60; - Unable to perform authentication 
+            </summary>
+            <value>Indicates whether or not the cardholder was authenticated   * &#x60;Y&#x60; - Customer authenticated   * &#x60;N&#x60; - Customer not authenticated   * &#x60;A&#x60; - An authentication attempt occurred but could not be completed   * &#x60;U&#x60; - Unable to perform authentication </value>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Common.ThreeDSEnrollment.Cryptogram">
+            <summary>
+            Base64 encoded cryptographic identifier (CAVV) used by the card schemes to validate the integrity of the 3D secure payment data
+            </summary>
+            <value>Base64 encoded cryptographic identifier (CAVV) used by the card schemes to validate the integrity of the 3D secure payment data</value>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Common.ThreeDSEnrollment.Xid">
+            <summary>
+            Unique identifier for the transaction assigned by the MPI
+            </summary>
+            <value>Unique identifier for the transaction assigned by the MPI</value>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Common.ThreeDSEnrollment.Version">
+            <summary>
+            Indicates the version of 3D Secure that was used for authentication
+            </summary>
+            <value>Indicates the version of 3D Secure that was used for authentication</value>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Common.ThreeDSEnrollment.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Common.ThreeDSEnrollment.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Common.ThreeDSEnrollment.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Common.ThreeDSEnrollment.Equals(CheckoutPaymentGateway.Common.ThreeDSEnrollment)">
+            <summary>
+            Returns true if Model3dsData instances are equal
+            </summary>
+            <param name="other">Instance of Model3dsData to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Common.ThreeDSEnrollment.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Components.IPaymentComponent.CreatePaymentAsync(CheckoutPaymentGateway.Requests.PaymentRequest{CheckoutPaymentGateway.Requests.CardRequest})">
+            <summary>
+            Create a payment from a request
+            Mapping to CardRequest source for now. Should be IRequestSource
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Components.PaymentComponent">
+            <summary>
+            Component to aggregate payment data and services
+            It's too big, should be broken into smaller components
+            </summary>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Components.PaymentComponent.CreatePaymentAsync(CheckoutPaymentGateway.Requests.PaymentRequest{CheckoutPaymentGateway.Requests.CardRequest})">
+            <summary>
+            Create a payment
+            Mapping to CardRequest source for now. Should be IRequestSource
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CheckoutPaymentGateway.ConfigurationOptions.ServiceOptions">
+            <summary>
+            Options to access other services
+            Assumes that these services use Client key and secret key for auth
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.ConfigurationOptions.ServiceOptions.Url">
+            <summary>
+            Url of the service.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.ConfigurationOptions.ServiceOptions.ClientKey">
+            <summary>
+            Client Key for auth.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.ConfigurationOptions.ServiceOptions.SecretKey">
+            <summary>
+            Secret Key for auth.
+            </summary>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Controllers.PaymentsController">
+            <summary>
+            Payments
+            </summary>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Controllers.PaymentsController.RequestAsync(CheckoutPaymentGateway.Requests.PaymentRequest{CheckoutPaymentGateway.Requests.CardRequest},System.String)">
+            <summary>
+            Request a payment
+            </summary>
+            <remarks>To request a payment from a payment source. Send the payment source type and the required data to process a payment from the source</remarks>
+            <param name="idempotencyKey">An optional idempotency key for safely retrying payment requests</param>
+            <response code="201">Payment processed successfully</response>
+            <response code="202">Payment asynchronous or further action required</response>
+            <response code="401">Unauthorized</response>
+            <response code="422">Invalid data was sent</response>
+            <response code="429">Too many requests or duplicate request detected</response>
+            <response code="502">Bad gateway</response>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Controllers.PaymentsController.GetAsync(System.Guid)">
+            <summary>
+            Get payment details.
+            </summary>
+            <remarks>Returns the details of the payment with the specified identifier. </remarks>
+            <param name="id">The payment or payment session identifier</param>
+            <response code="200">Payment retrieved successfully</response>
+            <response code="401">Unauthorized</response>
+            <response code="404">Payment not found</response>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Enums.PaymentStatus">
+            <summary>
+            The type of payment.
+            </summary>
+        </member>
+        <member name="F:CheckoutPaymentGateway.Enums.PaymentStatus.Pending">
+            <summary>
+            Pending - further processing required.
+            </summary>
+        </member>
+        <member name="F:CheckoutPaymentGateway.Enums.PaymentStatus.Authorized">
+            <summary>
+            Authorized
+            </summary>
+        </member>
+        <member name="F:CheckoutPaymentGateway.Enums.PaymentStatus.CardVerified">
+            <summary>
+            Card Verified
+            </summary>
+        </member>
+        <member name="F:CheckoutPaymentGateway.Enums.PaymentStatus.Voided">
+            <summary>
+            Voided
+            </summary>
+        </member>
+        <member name="F:CheckoutPaymentGateway.Enums.PaymentStatus.Refunded">
+            <summary>
+            Refunded
+            </summary>
+        </member>
+        <member name="F:CheckoutPaymentGateway.Enums.PaymentStatus.Declined">
+            <summary>
+            Declined
+            </summary>
+        </member>
+        <member name="F:CheckoutPaymentGateway.Enums.PaymentStatus.Cancelled">
+            <summary>
+            Cancelled
+            </summary>
+        </member>
+        <member name="F:CheckoutPaymentGateway.Enums.PaymentStatus.Paid">
+            <summary>
+            Paid
+            </summary>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Enums.PaymentType">
+            <summary>
+            Payment types
+            </summary>
+        </member>
+        <member name="F:CheckoutPaymentGateway.Enums.PaymentType.Regular">
+            <summary>
+            Regular (one-time) payment.
+            </summary>
+        </member>
+        <member name="F:CheckoutPaymentGateway.Enums.PaymentType.Recurring">
+            <summary>
+            Recurring payment.
+            </summary>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Extensions.ServiceCollectionExtensions">
+            <summary>
+            IServiceCollection Extensions
+            </summary>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Infrastructure.Acquirer.IAcquirerClient">
+            <summary>
+            Interface for Acquirer services consumed by the gateway
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:CheckoutPaymentGateway.Infrastructure.IApiClient.PostAsync``1(System.String,CheckoutPaymentGateway.Infrastructure.IApiCredentials,System.Threading.CancellationToken,System.Object,System.String)" -->
+        <member name="M:CheckoutPaymentGateway.Infrastructure.IApiCredentials.AuthorizeAsync(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Authorizes the request.
+            </summary>
+            <param name="httpRequest">The HTTP request to authorize.</param>
+        </member>
+        <member name="T:CheckoutPaymentGateway.MappingProfiles.DestinationProfile">
+            <summary>
+            Map merchant bank details to payment destination
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.CardRequest.CustomerId">
+            <summary>
+            Gets or Sets CustomerId
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.CardRequest.Number">
+            <summary>
+            Gets or Sets ExpiryMonth
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.CardRequest.ExpiryMonth">
+            <summary>
+            Gets or Sets ExpiryMonth
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.CardRequest.ExpiryYear">
+            <summary>
+            Gets or Sets ExpiryYear
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.CardRequest.Id">
+            <summary>
+            Gets or Sets Id for existing card
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.CardRequest.Last4">
+            <summary>
+            Gets or Sets Last4
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.CardRequest.Fingerprint">
+            <summary>
+            Gets or Sets Fingerprint
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.CardRequest.Name">
+            <summary>
+            Gets or Sets Name
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.CardRequest.CvvCheck">
+            <summary>
+            Gets or Sets CvvCheck
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.CardRequest.AvsCheck">
+            <summary>
+            Gets or Sets AvsCheck
+            </summary>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Requests.CardRequest.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Requests.CustomerRequest">
+            <summary>
+            A customer in a payment request.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.CustomerRequest.Id">
+            <summary>
+            The unique identifier of the customer. This can be passed as a source when making a payment.
+            Th customers default payment will  be used when customer id is passed as a source.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.CustomerRequest.Email">
+            <summary>
+            The customer&#x27;s email address
+            </summary>
+            <value>The customer&#x27;s email address</value>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.CustomerRequest.Name">
+            <summary>
+            The customer&#x27;s name
+            </summary>
+            <value>The customer&#x27;s name</value>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Requests.CustomerRequest.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Requests.CustomerRequest.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Requests.CustomerRequest.Equals(CheckoutPaymentGateway.Requests.CustomerRequest)">
+            <summary>
+            Returns true if PaymentCustomer instances are equal
+            </summary>
+            <param name="other">Instance of PaymentCustomer to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Requests.CustomerRequest.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Requests.IRequestSource">
+            <summary>
+            A payment source in a payment request.
+            Source is payment method dependant.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.IRequestSource.Type">
+            <summary>
+            The payment source type. 
+            </summary>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Requests.PaymentRequest`1">
+            <summary>
+            A request for a payment.
+            </summary>
+            <typeparam name="TPaymentSource">The source of payment.</typeparam>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.PaymentRequest`1.Source">
+            <summary>
+            Gets or Sets Source.
+            Use card source for now. Should be TPaymentSource
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.PaymentRequest`1.Amount">
+            <summary>
+            The payment amount to charge from the source. The exact format depends on the currency 
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.PaymentRequest`1.Currency">
+            <summary>
+            The three-letter ISO currency code.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.PaymentRequest`1.PaymentType">
+            <summary>
+            Gets or sets the payment type. 
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.PaymentRequest`1.MerchantInitiated">
+            <summary>
+            Flags the payment as a merchant-initiated transaction (MIT).
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.PaymentRequest`1.Reference">
+            <summary>
+            Gets or sets a reference you can later use to identify this payment such as an invoice number.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.PaymentRequest`1.Description">
+            <summary>
+            A description of the payment
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.PaymentRequest`1.Customer">
+            <summary>
+            Gets or Sets Customer for the payment
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.PaymentRequest`1.BillingDescriptor">
+            <summary>
+            Gets or Sets Billing Description
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.PaymentRequest`1.Shipping">
+            <summary>
+            Gets or Sets Shipping
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.PaymentRequest`1.ThreeDS">
+            <summary>
+            Gets or Sets 3ds secure to indicate whether to process this payment as a 3D-Secure.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.PaymentRequest`1.PreviousPaymentId">
+            <summary>
+            For recurring payments – an existing payment identifier from the recurring series or the Scheme Transaction Id 
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.PaymentRequest`1.Risk">
+            <summary>
+            Gets or Sets Risk
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.PaymentRequest`1.SuccessUrl">
+            <summary>
+            For redirect payment methods, this overrides the default success redirect URL configured on merchant account
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.PaymentRequest`1.FailureUrl">
+            <summary>
+            For redirect payment methods, this overrides the default failure redirect URL configured on merchant account
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.PaymentRequest`1.PaymentIp">
+            <summary>
+            The IP address used to make the payment. Required for some risk analysis
+            </summary>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Requests.PaymentRequest`1.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Requests.PaymentRequest`1.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Requests.PaymentRequest`1.Equals(CheckoutPaymentGateway.Requests.PaymentRequest{`0})">
+            <summary>
+            Returns true if PaymentRequest instances are equal
+            </summary>
+            <param name="other">Instance of PaymentRequest to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Requests.PaymentRequest`1.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Requests.RiskRequest">
+            <summary>
+            The risk assessment performed during the processing of a payment.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Requests.RiskRequest.Flagged">
+            <summary>
+            Whether the payment was flagged by a risk check
+            </summary>
+            <value>Whether the payment was flagged by a risk check</value>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Requests.RiskRequest.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Requests.RiskRequest.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Requests.RiskRequest.Equals(CheckoutPaymentGateway.Requests.RiskRequest)">
+            <summary>
+            Returns true if PaymentRisk instances are equal
+            </summary>
+            <param name="other">Instance of PaymentRisk to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Requests.RiskRequest.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Requests.ThreeDSRequest">
+            <summary>
+            Information required for 3D-Secure payments
+            </summary>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Responses.CustomerResponse">
+            <summary>
+            Represents a customer in a payment response.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.CustomerResponse.Id">
+            <summary>
+            The unique identifier of the customer. This can be passed as a source when making a payment.
+            Th customers default payment will  be used when customer id is passed as a source.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.CustomerResponse.Email">
+            <summary>
+            The customer&#x27;s email address
+            </summary>
+            <value>The customer&#x27;s email address</value>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.CustomerResponse.Name">
+            <summary>
+            The customer&#x27;s name
+            </summary>
+            <value>The customer&#x27;s name</value>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.CustomerResponse.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.CustomerResponse.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.CustomerResponse.Equals(CheckoutPaymentGateway.Responses.CustomerResponse)">
+            <summary>
+            Returns true if PaymentCustomer instances are equal
+            </summary>
+            <param name="other">Instance of PaymentCustomer to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.CustomerResponse.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Responses.DestinationResponse">
+            <summary>
+            Destination for the payment.
+            Destination is Payment source going in reverse? pay in, instead of pay out
+            Again. There are many destinations so base interface will be used
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.DestinationResponse.AccountNumber">
+            <summary>
+            Account Number
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.DestinationResponse.Bank">
+            <summary>
+            Account Bank
+            </summary>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Responses.IResponseSource">
+            <summary>
+            A payment source returned in a payment response.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.IResponseSource.Type">
+            <summary>
+            Gets the final payment source type. For payment request sources that result in a card payment (token, source ID etc.) 
+            this will be card otherwise the name of the alternative payment method.
+            </summary>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Responses.PaymentAcceptedResponse">
+            <summary>
+            Payment accepted response.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentAcceptedResponse.Id">
+            <summary>
+            The payment's unique identifier
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentAcceptedResponse.Status">
+            <summary>
+            The status of the payment
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentAcceptedResponse.Reference">
+            <summary>
+            Your reference for the payment request
+            </summary>
+            <value>Your reference for the payment request</value>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentAcceptedResponse.Customer">
+            <summary>
+            The customer associated with the payment, if provided in the request
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentAcceptedResponse.ThreeDS">
+            <summary>
+            Provides 3D Secure enrollment status
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentAcceptedResponse.Links">
+            <summary>
+            Gets or Sets Links
+            </summary>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentAcceptedResponse.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentAcceptedResponse.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentAcceptedResponse.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentAcceptedResponse.Equals(CheckoutPaymentGateway.Responses.PaymentAcceptedResponse)">
+            <summary>
+            Returns true if PaymentAcceptedResponse instances are equal
+            </summary>
+            <param name="other">Instance of PaymentAcceptedResponse to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentAcceptedResponse.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Responses.PaymentAcceptedResponseLinks">
+            <summary>
+            The Links related to an Accepted payment
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentAcceptedResponseLinks.Self">
+            <summary>
+            The URI of the payment
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentAcceptedResponseLinks.Redirect">
+            <summary>
+            The URI that the customer should be redirected to in order to complete the payment
+            </summary>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentAcceptedResponseLinks.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentAcceptedResponseLinks.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentAcceptedResponseLinks.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentAcceptedResponseLinks.Equals(CheckoutPaymentGateway.Responses.PaymentAcceptedResponseLinks)">
+            <summary>
+            Returns true if PaymentAcceptedResponseLinks instances are equal
+            </summary>
+            <param name="other">Instance of PaymentAcceptedResponseLinks to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentAcceptedResponseLinks.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:CheckoutPaymentGateway.Responses.PaymentDetails.Id" -->
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetails.RequestedOn">
+            <summary>
+            The date/time the payment was requested
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetails.Source">
+            <summary>
+            The source of the payment
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetails.Destination">
+            <summary>
+            The destination of the payment
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetails.Amount">
+            <summary>
+            The original payment amount
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetails.Currency">
+            <summary>
+            The three-letter ISO currency code of the payment
+            </summary>
+            <value>The three-letter ISO currency code&lt; of the payment</value>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetails.PaymentType">
+            <summary>
+            This must be specified for card payments where the cardholder is not present (i.e., recurring or mail order / telephone order)
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetails.Reference">
+            <summary>
+            Your reference for the payment
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetails.Description">
+            <summary>
+            A description of the payment
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetails.Approved">
+            <summary>
+            Whether the payment was successful
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetails.Status">
+            <summary>
+            The status of the payment
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetails.ThreeDS">
+            <summary>
+            Provides information relating to the processing of 3D Secure payments
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetails.Risk">
+            <summary>
+            Gets or Sets Risk
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetails.Customer">
+            <summary>
+            Gets or Sets Customer
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetails.BillingDescriptor">
+            <summary>
+            Gets or Sets BillingDescriptor
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetails.Shipping">
+            <summary>
+            Gets or Sets Shipping
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetails.PaymentIp">
+            <summary>
+            The IP address used to make the payment
+            </summary>
+            <value>The IP address used to make the payment</value>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetails.Eci">
+            <summary>
+            The final Electronic Commerce Indicator (ECI) security level used to authorize the payment.  Applicable for 3D Secure, digital wallets, and network token payments 
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetails.SchemeId">
+            <summary>
+            The scheme transaction identifier 
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetails.Links">
+            <summary>
+            Gets or Sets Links
+            </summary>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentDetails.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentDetails.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentDetails.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentDetails.Equals(CheckoutPaymentGateway.Responses.PaymentDetails)">
+            <summary>
+            Returns true if Payment instances are equal
+            </summary>
+            <param name="other">Instance of Payment to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentDetails.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Responses.PaymentDetailsDestination">
+            <summary>
+            A destination for applicable payments  
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetailsDestination.Id">
+            <summary>
+            The OpenPay account identifier
+            </summary>
+            <value>The OpenPay account identifier</value>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetailsDestination.Amount">
+            <summary>
+            The amount to be credited to the destination in the major currency unit
+            </summary>
+            <value>The amount to be credited to the destination in the major currency unit</value>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentDetailsDestination.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentDetailsDestination.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentDetailsDestination.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentDetailsDestination.Equals(CheckoutPaymentGateway.Responses.PaymentDetailsDestination)">
+            <summary>
+            Returns true if PaymentDestination instances are equal
+            </summary>
+            <param name="other">Instance of PaymentDestination to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentDetailsDestination.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetailsLinks.Self">
+            <summary>
+            The URI of the payment
+            </summary>
+            <value>The URI of the payment</value>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetailsLinks.Actions">
+            <summary>
+            A link to the payment&#x27;s associated actions
+            </summary>
+            <value>A link to the payment&#x27;s associated actions</value>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetailsLinks.Void">
+            <summary>
+            A link to void the payment, where applicable
+            </summary>
+            <value>A link to void the payment, where applicable</value>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentDetailsLinks.Refund">
+            <summary>
+            A link to refund the payment, where applicable
+            </summary>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentDetailsLinks.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentDetailsLinks.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentDetailsLinks.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentDetailsLinks.Equals(CheckoutPaymentGateway.Responses.PaymentDetailsLinks)">
+            <summary>
+            Returns true if PaymentLinks instances are equal
+            </summary>
+            <param name="other">Instance of PaymentLinks to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentDetailsLinks.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Responses.PaymentResponse">
+            <summary>
+            A payment response from the processing of a request.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentResponse.Id">
+            <summary>
+            The payment's unique identifier.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentResponse.ActionId">
+            <summary>
+            The unique identifier for the action performed against this payment.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentResponse.Amount">
+            <summary>
+            The payment amount.
+            </summary>
+            <value>The payment amount</value>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentResponse.Currency">
+            <summary>
+            The three-letter ISO currency code of the payment.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentResponse.Approved">
+            <summary>
+            Whether or not the authorization or capture was successful
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentResponse.Status">
+            <summary>
+            The status of the payment
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentResponse.AuthCode">
+            <summary>
+            The acquirer authorization code if the payment was authorized
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentResponse.ResponseCode">
+            <summary>
+            The Gateway response code
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentResponse.ResponseSummary">
+            <summary>
+            The Gateway response summary
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentResponse.ThreeDS">
+            <summary>
+            Provides 3D Secure enrollment status if the payment was downgraded to non-3D Secure
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentResponse.Risk">
+            <summary>
+            Gets or Sets Risk
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentResponse.Source">
+            <summary>
+            The source of the payment
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentResponse.Customer">
+            <summary>
+            The customer associated with the payment, if provided in the request
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentResponse.ProcessedOn">
+            <summary>
+            The date/time the payment was processed
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentResponse.Reference">
+            <summary>
+            Your reference for the payment
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentResponse.Eci">
+            <summary>
+            The final Electronic Commerce Indicator (ECI) security level used to authorize the payment. Applicable for 3D Secure, digital wallet, and network token payments
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentResponse.SchemeId">
+            <summary>
+            The scheme transaction identifier
+            </summary>
+            <value>The scheme transaction identifier</value>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentResponse.Links">
+            <summary>
+            Gets or Sets Links
+            </summary>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentResponse.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentResponse.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentResponse.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentResponse.Equals(CheckoutPaymentGateway.Responses.PaymentResponse)">
+            <summary>
+            Returns true if PaymentResponse instances are equal
+            </summary>
+            <param name="other">Instance of PaymentResponse to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentResponse.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Responses.PaymentResponseLinks">
+            <summary>
+            The links related to the payment
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentResponseLinks.Self">
+            <summary>
+            The URI of the payment
+            </summary>
+            <value>The URI of the payment</value>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentResponseLinks.Actions">
+            <summary>
+            A link to the payment&#x27;s associated actions
+            </summary>
+            <value>A link to the payment&#x27;s associated actions</value>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentResponseLinks.Void">
+            <summary>
+            A link to void the payment, where applicable
+            </summary>
+            <value>A link to void the payment, where applicable</value>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.PaymentResponseLinks.Refund">
+            <summary>
+            A link to refund the payment, where applicable
+            </summary>
+            <value>A link to refund the payment, where applicable</value>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentResponseLinks.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentResponseLinks.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentResponseLinks.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentResponseLinks.Equals(CheckoutPaymentGateway.Responses.PaymentResponseLinks)">
+            <summary>
+            Returns true if PaymentResponseLinks instances are equal
+            </summary>
+            <param name="other">Instance of PaymentResponseLinks to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.PaymentResponseLinks.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Responses.RiskResponse">
+            <summary>
+            The risk assessment response after risk analysis during payment processing.
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.RiskResponse.Flagged">
+            <summary>
+            Whether the payment was flagged by a risk check
+            </summary>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.RiskResponse.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.RiskResponse.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.RiskResponse.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.RiskResponse.Equals(CheckoutPaymentGateway.Responses.RiskResponse)">
+            <summary>
+            Returns true if PaymentRisk instances are equal
+            </summary>
+            <param name="other">Instance of PaymentRisk to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.RiskResponse.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Responses.ValidationError">
+            <summary>
+            Request failed validation
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.ValidationError.RequestId">
+            <summary>
+            Gets or Sets RequestId
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.ValidationError.ErrorType">
+            <summary>
+            Gets or Sets ErrorType
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Responses.ValidationError.ErrorCodes">
+            <summary>
+            Gets or Sets ErrorCodes
+            </summary>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.ValidationError.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.ValidationError.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.ValidationError.Equals(CheckoutPaymentGateway.Responses.ValidationError)">
+            <summary>
+            Returns true if ValidationError instances are equal
+            </summary>
+            <param name="other">Instance of ValidationError to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Responses.ValidationError.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="T:CheckoutPaymentGateway.Serializer.ISerializer">
+            <summary>
+            An interface for classes that provide serialization to and from string formats such as JSON.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:CheckoutPaymentGateway.Serializer.ISerializer.Serialize(System.Object)" -->
+        <!-- Badly formed XML comment ignored for member "M:CheckoutPaymentGateway.Serializer.ISerializer.Deserialize(System.String,System.Type)" -->
+        <member name="T:CheckoutPaymentGateway.Serializer.JsonSerializer">
+            <summary>
+            Serializer that provides serialization to and from JSON.
+            </summary>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Serializer.JsonSerializer.#ctor(System.Action{Newtonsoft.Json.JsonSerializerSettings})">
+            <summary>
+            Creates a new <see cref="T:CheckoutPaymentGateway.Serializer.JsonSerializer"/> that allows customization of the underlying
+            JSON.NET serializer settings.
+            </summary>
+            <param name="configureSettings">An action to be run against the JSON.NET serializer settings.</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:CheckoutPaymentGateway.Serializer.JsonSerializer.Serialize(System.Object)" -->
+        <!-- Badly formed XML comment ignored for member "M:CheckoutPaymentGateway.Serializer.JsonSerializer.Deserialize(System.String,System.Type)" -->
+        <member name="P:CheckoutPaymentGateway.Sources.CardSource.CustomerId">
+            <summary>
+            Gets or Sets CustomerId
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Sources.CardSource.ExpiryMonth">
+            <summary>
+            Gets or Sets ExpiryMonth
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Sources.CardSource.ExpiryYear">
+            <summary>
+            Gets or Sets ExpiryYear
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Sources.CardSource.BillingDetails">
+            <summary>
+            Gets or Sets BillingDetails
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Sources.CardSource.Id">
+            <summary>
+            Gets or Sets Id
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Sources.CardSource.Last4">
+            <summary>
+            Gets or Sets Last4
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Sources.CardSource.PaymentMethod">
+            <summary>
+            Gets or Sets PaymentMethod
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Sources.CardSource.Fingerprint">
+            <summary>
+            Gets or Sets Fingerprint
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Sources.CardSource.Name">
+            <summary>
+            Gets or Sets Name
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Sources.CardSource.CvvCheck">
+            <summary>
+            Gets or Sets CvvCheck
+            </summary>
+        </member>
+        <member name="P:CheckoutPaymentGateway.Sources.CardSource.AvsCheck">
+            <summary>
+            Gets or Sets AvsCheck
+            </summary>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Sources.CardSource.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Sources.CardSource.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Sources.CardSource.Equals(CheckoutPaymentGateway.Sources.CardSource)">
+            <summary>
+            Returns true if Card instances are equal
+            </summary>
+            <param name="other">Instance of Card to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:CheckoutPaymentGateway.Sources.CardSource.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+    </members>
+</doc>
